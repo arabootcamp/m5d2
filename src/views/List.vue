@@ -38,8 +38,8 @@
       </div>
 
       <!--Modal Edit-->
-      <b-modal id="edit-modal" ref="edit-modal" :title="'Edición de Paciente, indice: '+form.index"
-        @hidden="resetFormData" @ok="handleOkEdit" hide-header-close>
+      <b-modal id="edit-modal" ref="edit-modal" :title="'Edición de Paciente, # '+form.index"
+        @hidden="resetFormData" @ok="handleOkEdit" ok-title="Editar"  ok-variant="success" hide-header-close>
 
         <form ref="form" @submit.stop.prevent="handleSubmitEdit">
           <b-form-group label="Nombre" label-for="name-input"
@@ -59,12 +59,12 @@
       </b-modal>
 
       <!--Modal Delete-->
-      <b-modal id="delete-modal" @hidden="resetFormData" @ok="handleOkDelete" hide-header-close>¿Esta seguro que
+      <b-modal id="delete-modal" @hidden="resetFormData" @ok="handleOkDelete" ok-title="Eliminar" ok-variant="danger" hide-header-close>¿Esta seguro que
         desea
         realizar la eliminación de {{form.nombre}}?</b-modal>
 
       <!--Modal Informativo -->
-      <b-modal id="info-modal" @ok="handleOkInfo" ok-only hide-header-close>{{modalInfo.text}}</b-modal>
+      <b-modal id="info-modal" @ok="handleOkInfo" ok-only ok-variant="info" hide-header-close>{{modalInfo.text}}</b-modal>
 
     </div>
   </div>

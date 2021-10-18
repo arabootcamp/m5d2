@@ -20,8 +20,8 @@
 
         <b-form-group class="mt-5">
           <b-button type="submit" variant="primary" formnovalidate>Agregar</b-button>
-          <b-button type="reset" variant="danger" class="ms-4">Restablecer</b-button>
-          <b-button type="button" variant="success" class="ms-4" @click="backTo()">Regresar</b-button>
+          <b-button type="reset" variant="secondary" class="ms-4">Restablecer</b-button>
+          <b-button type="button" variant="warning" class="ms-4" @click="backTo()">Regresar</b-button>
         </b-form-group>
       </b-form>
       <p class="mt-5" :class="informative.color">{{informative.text}}</p>
